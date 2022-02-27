@@ -1,8 +1,10 @@
 import { ethers } from 'hardhat'
 
+const PLACEHOLDER_URI = 'https://example.com'
+
 async function main() {
   const Grebz = await ethers.getContractFactory('Grebz')
-  const grebz = await Grebz.deploy('Hello, Hardhat!')
+  const grebz = await Grebz.deploy(PLACEHOLDER_URI)
 
   await grebz.deployed()
 
